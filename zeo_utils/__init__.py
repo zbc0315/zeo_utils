@@ -5,6 +5,9 @@
 # @File    : __init__.py.py
 # @Software: PyCharm
 
+from zeo_utils.network import Network
+from zeo_utils.builder import Builder
+
 
 if __name__ == "__main__":
     pass

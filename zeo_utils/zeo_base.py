@@ -6,6 +6,7 @@
 # @Software: PyCharm
 
 import os
+import logging
 
 
 class ZeoBase:
@@ -26,9 +27,10 @@ class ZeoBase:
     def _get_command_res(cls, command: str) -> str:
         """ 获得执行终端命令后的输出值
         """
-        print(f"Command: {command}\n")
+        logging.info(f"Command: {command}\n")
         res = os.popen(command)
         res_text = res.read()
+        res.close()
         return res_text
 
 
